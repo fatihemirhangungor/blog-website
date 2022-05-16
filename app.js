@@ -65,8 +65,9 @@ app.get("/posts/:postName", function(req, res) {
   })
 })
 
+// use port 3000 unless there exists a preconfigured port
+var port = process.env.PORT || 3000;
 
-
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("Server started on port 3000");
 });
